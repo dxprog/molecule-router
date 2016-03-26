@@ -1,7 +1,7 @@
 import Router from './src/router';
 import Route from './src/route';
 
-export default {
+export {
   Router,
   Route
 };

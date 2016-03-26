@@ -1,4 +1,4 @@
-import Molecule from 'molecule';
+import Molecule from 'moleculejs';
 import Singleton from 'molecule-singleton';
 
 const ROUTE_NAMESPACE = '__ROUTE_';

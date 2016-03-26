@@ -16,9 +16,14 @@
     "url": "https://github.com/dxprog/molecule-router/issues"
   },
   "homepage": "https://github.com/dxprog/molecule-router#readme",
+  "browserify": {
+    "transform": [
+      "babelify"
+    ]
+  },
   "dependencies": {
     "molecule-singleton": "^1.0.0",
-    "moleculejs": "^1.0.0",
+    "moleculejs": "^1.0.1",
     "underscore": "^1.8.3"
   },
   "devDependencies": {
