@@ -60,4 +60,20 @@ describe('Route tests', function() {
     sinon.assert.calledOnce(routeInstance.initRoute);
     sinon.assert.calledOnce(routeInstance.revisitRoute);
   });
+
+  it('should pass parameters to initRoute/revisitRoute', function() {
+    const routeName = 'param-route';
+    const routeInvoke = Route(routeName, {
+      initRoute: sandbox.spy(),
+      revisitRoute: sandbox.spy()
+    });
+    const routeInstance = getRouteInstance(routeName);
+
+    const param = 'hey dog';
+    routeInvoke(param);
+    sinon.assert.calledWith(routeInstance.initRoute, param);
+
+    routeInvoke(param);
+    sinon.assert.calledWith(routeInstance.revisitRoute, param);
+  });
 });
